@@ -1,0 +1,35 @@
+.wraper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  .submit {
+    padding: 10px 20px;
+    width: fit-content;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+  }
+  .inputBlock {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .input {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      gap: 20px;
+      & > input {
+        padding: 5px;
+        min-width: 220px;
+      }
+    }
+
+    .error {
+      margin-top: 5px;
+      font-size: small;
+      color: red;
+    }
+  }
+}

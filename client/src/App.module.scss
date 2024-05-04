@@ -1,0 +1,31 @@
+.wraper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  .loading {
+    font-size: x-large;
+    margin-top: 30px;
+  }
+  .notFound {
+    font-size: x-large;
+    margin-top: 20px;
+    color: red;
+  }
+  .error {
+    color: red;
+    margin-top: 30px;
+    font-size: large;
+  }
+  .userData {
+    font-size: medium;
+    margin-top: 30px;
+    border: 1px solid black;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
