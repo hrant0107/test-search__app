@@ -4,10 +4,10 @@ import {
   searchValidation,
 } from "../validations/serachValidation";
 
-import { search } from "../controllers/searchController";
+import { getUser } from "../controllers/searchController";
 
 const searchRouter = Router();
 
-searchRouter.post("/", searchValidation, handleValidationErrors, search);
+searchRouter.post("/", searchValidation, handleValidationErrors, getUser);
 
 export default searchRouter;

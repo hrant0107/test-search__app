@@ -15,7 +15,7 @@ app.use(
   })
 );
 
-app.use("/search", searchRouter);
+app.use("/user", searchRouter);
 
 app.listen(process.env.PORT || 3002, () => {
   console.info("Server listening on port 3002");

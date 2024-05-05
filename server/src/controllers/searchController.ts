@@ -3,7 +3,7 @@ import { sendError, sendSuccess } from "../utils/response";
 import { SeachDataType } from "../types/searchData";
 import { SEARCH_DATA } from "../mock/searchData";
 
-export const search = (req: Request, res: Response): void => {
+export const getUser = (req: Request, res: Response): void => {
   try {
     let { email, number } = req.body;
 

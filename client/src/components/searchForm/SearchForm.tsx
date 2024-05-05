@@ -1,23 +1,22 @@
+import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { IFormData } from "../../types/searchDataType";
-
 import InputMask from "react-input-mask";
-
+import { IFormData } from "../../types/searchDataType";
 import styles from "./SearchForm.module.scss";
 
 type SearchFormProps = {
-  getData: (data: IFormData) => Promise<void>;
+  getUser: (data: IFormData) => Promise<void>;
 };
 
-const SearchForm: React.FC<SearchFormProps> = ({ getData }) => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<IFormData>();
+const SearchForm: React.FC<SearchFormProps> = ({ getUser }) => {
+  const { register, handleSubmit, formState: { errors } } = useForm<IFormData>();
 
-  const onSubmit: SubmitHandler<IFormData> = (data) => {
-    getData(data);
+  const onSubmit: SubmitHandler<IFormData> = async (data) => {
+    try {
+      getUser(data);
+    } catch (error) {
+      console.error("Error occurred while getting data:", error);
+    }
   };
 
   return (

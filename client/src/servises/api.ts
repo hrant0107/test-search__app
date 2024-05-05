@@ -3,6 +3,9 @@ import { IFormData } from "../types/searchDataType";
 
 let cancelToken: any;
 
+const serverUrl = process.env.REACT_APP_SERVER_URL || "http://localhost:3002";
+
+
 export const searchUsers = async (
   email: string,
   number: string
@@ -13,7 +16,7 @@ export const searchUsers = async (
     }
     cancelToken = axios.CancelToken.source();
     const { data } = await axios.post(
-      `http://localhost:3002/search`,
+      `${serverUrl}/user`,
       {
         email,
         number,
